@@ -22,14 +22,12 @@ extern CharCode charCodes[];
 /***************************************************************/
 
 void skipBlank() {
-  // TODO
   while (currentChar != -1 && charCodes[currentChar] == CHAR_SPACE)
 	readChar();
 }
 
 void skipComment() {
-  // TODO
-   while (1) {
+  while (1) {
     // Read next character
     readChar();
 
@@ -50,8 +48,7 @@ void skipComment() {
 }
 
 Token* readIdentKeyword(void) {
-  // TODO
-    int count = 0;
+  int count = 0;
   Token* token = makeToken(TK_IDENT, lineNo, colNo);
 
   while (charCodes[currentChar] == CHAR_LETTER || charCodes[currentChar] == CHAR_DIGIT) {
@@ -85,8 +82,7 @@ Token* readIdentKeyword(void) {
 }
 
 Token* readNumber(void) {
-  // TODO
-    int count = 0;
+  int count = 0;
   Token* token = makeToken(TK_NUMBER, lineNo, colNo);
 
   while (charCodes[currentChar] == CHAR_DIGIT) {
@@ -113,7 +109,6 @@ Token* readNumber(void) {
 }
 
 Token* readConstChar(void) {
-  // TODO
   Token* token = makeToken(TK_CHAR, lineNo, colNo);
 
   // Read next character
@@ -169,7 +164,6 @@ Token* readConstChar(void) {
   }
   return token;
 }
-
 
 Token* getToken(void) {
   Token *token;
@@ -412,7 +406,7 @@ int main(int argc, char *argv[]) {
     printf("Can\'t read input file!\n");
     return -1;
   }
-    
+
   return 0;
 }
 
