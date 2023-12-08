@@ -1,0 +1,5 @@
+Program Example8; (* Example 1 buoi 2 *)
+Var n : Float;
+Begin
+	f := 3.1212;
+End. (* Example 1 buoi 2 *)
